@@ -1,0 +1,11 @@
+[Unit]
+Description=Dummy Log Monitoring Service
+After=multi-user.target
+
+[Service]
+ExecStart=/bin/bash /usr/local/bin/dummy-service.sh
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
